@@ -140,7 +140,7 @@ class Sudoku
     {
         // check inputs
         if(!in_array($size,self::$dimensions,true)
-            || in_array($difficulty,range(0,5),true)    // todo
+            || in_array($difficulty, [self::VERY_EASY, self::EASY, self::NORMAL, self::MEDIUM, self::HARD],true)
             || ($seed !== null && !is_int($seed)) )
             throw new \InvalidArgumentException('Invalid input');
 
